@@ -1,0 +1,131 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: #222 2px solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 8px;
+    padding: 3em;
+    color: #333;
+}
+
+.main h1 {
+    text-align: center;
+}
+
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.todoList {
+    display:  grid;
+    grid-template-rows: 1fr auto;
+    gap: 0.5em;
+    font-size: 1.5em;
+    line-height: 1.1;
+    border: 1px solid black;
+    border-radius: 3px;
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+    background-color: #dfdfdf;
+    padding: 0.7em 1em;
+    margin: 0.5em;
+}
+
+.todoList ul {
+  padding: 0;
+  margin: 0;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #333;
+  padding: 4px 8px;
+}
+
+.task span {
+  flex-grow: 1;
+  margin-left: 8px;
+}
+
+.task button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    aspect-ratio: 1/1;
+    padding: 0;
+    border: none;
+    border-radius: 2px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 0px 10px 0px;
+    color: red;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.task button:hover {
+    background-color: #00000018;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1em;
+  aspect-ratio: 1/1;
+  border: 2px solid currentColor;
+  border-radius: 2px;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 30ms transform ease-in-out;
+  box-shadow: inset 1em 1em #000;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.inputBox {
+    display: flex;
+    justify-content: center;
+}
+
+.inputBox input {
+    margin: 0 3px;
+    border: 1px #333 solid;
+    border-radius: 5px;
+}
+
+.inputBox input:focus {
+    border: 1px #333 solid;
+    outline: none;
+}
+
+.inputBox button {
+    width: 1.8em;
+    aspect-ratio: 1/1;
+    font-size: 1em;
+    border: 1px #333 solid;
+    border-radius: 3px;
+    background-color: #fff;
+    transition: background-color 120ms ease-in-out;
+}
+
+.inputBox button:hover {
+    background-color: #00000007;
+    cursor: pointer;
+}
